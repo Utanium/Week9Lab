@@ -24,6 +24,12 @@
     <ClInclude Include="Armour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackWitch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Item.cpp">
@@ -36,6 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Armour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackWitch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

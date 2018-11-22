@@ -7,6 +7,9 @@
 */
 
 #include"Armour.h"
+Armour::Armour()
+    :Item({ "Armour", 0, 0.0f }), defence_{ 0 }, armourHealth_{ 0 }, armourType_{ Cardboard } {
+}
 
 Armour::Armour(std::string armourName, int value, float weight, int armourDefence, int armourHealth, ArmourType armourType)
     : Item({ armourName, value, weight }), defence_{ armourDefence }, armourHealth_{ armourHealth }, armourType_{ armourType } {
@@ -32,10 +35,10 @@ void Armour::SetArmourType(ArmourType armourType) {
 }
 std::string Armour::ToString() {
     std::string armourInfo{};
-    armourInfo.append("Armour: " + GetItemName() 
+    armourInfo.append("Armour: " + GetItemName()
         + ", Worth: " + std::to_string(GetItemValue())
         + " gold coins, Defence: " + std::to_string(GetArmourDefence())
-        + ", Armour Health: " + std::to_string(GetArmourHealth()) 
+        + ", Armour Health: " + std::to_string(GetArmourHealth())
         + ", Armour Material: " + std::to_string(GetArmourType()));
     return armourInfo;
 }

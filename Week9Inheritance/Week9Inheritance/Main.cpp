@@ -9,6 +9,8 @@
 #include"Item.h"
 #include"Weapon.h"
 #include"Armour.h"
+#include"GameCharacter.h"
+#include"BlackWitch.h"
 int main() {
     Item sword{ "Geoff's Blade", 100, 1.5f };
     std::cout << sword.ToString() << ". Weight: " << sword.GetItemWeight() << std::endl;
@@ -20,7 +22,7 @@ int main() {
     std::cout << "Getting Values \n";
     std::cout << "Name: " << sword.GetItemName() << std::endl;
     std::cout << "Value: " << sword.GetItemValue() << " Gold Coins" << std::endl;
-    std::cout << "Weight: " << sword.GetItemWeight() << std::endl <<std::endl;
+    std::cout << "Weight: " << sword.GetItemWeight() << std::endl << std::endl;
 
     std::cout << "Testing Weapon \n\n";
 
@@ -41,7 +43,7 @@ int main() {
     std::cout << "Health: " << sword2.GetWeaponHealth() << std::endl << std::endl;
 
     std::cout << "Testing Armour \n\n";
-    
+
     Armour testArmour{ "Arthur's Breastplate", 700, 23,50,100, Iron };
     std::cout << testArmour.ToString() << ". Weight: " << testArmour.GetItemWeight() << std::endl;
     std::cout << "Setting values \n";
@@ -54,10 +56,16 @@ int main() {
     std::cout << testArmour.ToString() << ". Weight: " << testArmour.GetItemWeight() << std::endl;
     std::cout << "Getting Values \n";
     std::cout << "Name: " << testArmour.GetItemName() << std::endl;
-    std::cout << "Value: " << testArmour.GetItemValue() <<" Gold Coins"<< std::endl;
+    std::cout << "Value: " << testArmour.GetItemValue() << " Gold Coins" << std::endl;
     std::cout << "Weight: " << testArmour.GetItemWeight() << std::endl;
     std::cout << "Defence: " << testArmour.GetArmourDefence() << std::endl;
     std::cout << "Health: " << testArmour.GetArmourHealth() << std::endl;
     std::cout << "Armour Type: " << testArmour.GetArmourType() << std::endl;
+
+    std::cout << "Testing Black Witch\n" << std::endl;
+    BlackWitch witch{ "Gertrude",100.0f,20.0f, Weapon{},Armour{"Cape",0,0,0,0,Cardboard},12, Idle, 19, 6 };
+    GameCharacter geoff{ "Geoff", 100.0f, 23.0f, Weapon{"Sword", 12, 2, 10, 100}, Armour{"Helmet", 20, 1.0f, 10, 20, Leather},29,Idle };
+    witch.Bewitch(geoff);
+    geoff.Attack(witch);
     return 0;
 }

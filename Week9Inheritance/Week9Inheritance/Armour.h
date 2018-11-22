@@ -11,6 +11,7 @@ enum ArmourType { Cardboard, Leather, Wood, Iron, Steel };
 
 class Armour : public Item {
 public:
+    Armour();
     Armour(std::string armourName, int value, float weight, int armourDefence, int armourHealth, ArmourType armourType);
     int GetArmourDefence();
     int GetArmourHealth();
